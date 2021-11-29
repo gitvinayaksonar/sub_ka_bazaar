@@ -1,0 +1,53 @@
+.productCardContainer {
+    margin : 0 2px;
+    padding: 10px;
+    height: 340px;
+    border-bottom: 2px dashed #cec8c85c;
+    background-color : #fff;
+    box-shadow : 2px 0 1px #cec8c85c;
+    flex: 0 0 23%;
+}
+
+.productHeading {
+    height : 15px;
+    font-size : 15px;
+    font-weight : bold;
+}
+
+.image {
+    max-width: 30%;
+}
+
+.productDetails {
+    height : 68px; 
+    background-color : #f3efefbf;
+    overflow: hidden;   
+    -webkit-line-clamp: 4;  
+    font-weight : 600;   
+    font-size : 11px;
+}
+
+.mrpBuyNowContainer {
+    height : 20px;
+}
+
+.mrp {
+    width : 50%;
+    float : left;
+    font-size : 12px; 
+    display :flex;
+    align-items : center;   
+    font-weight : bold;
+}
+
+.buyNow {
+    color : #fff;
+    float : right; 
+    width : 50%;
+    justify-content : center;
+    background-color : #cf0768;
+    cursor: pointer;
+    height : 30px;
+    display :flex;
+    align-items : center;
+}
