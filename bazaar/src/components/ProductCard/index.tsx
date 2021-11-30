@@ -8,6 +8,10 @@ function ProductCard(props : ProductCardProps) {
     const productObj = props.product;    
     console.log("productObj >>", productObj);
     
+    const clickHandler = (productName : string = 'product') => {
+        alert(`In Cart : ${productName}`)
+    }
+
     return (
         <div className = { styles.productCardContainer } >
             <h6 className = {styles.productHeading}> {productObj.name} </h6>
@@ -15,7 +19,7 @@ function ProductCard(props : ProductCardProps) {
             <p className = {styles.productDetails}>{productObj.description}</p>
             <div className = { styles.mrpBuyNowContainer}>
                 <p className = { styles.mrp}> {`MRP Rs.${productObj.price}`} </p>
-                <div>
+                <div onClick = {() => clickHandler(productObj.name)}>
                     <p className = { styles.buyNow}> Buy Now </p>
                 </div>
             </div>
