@@ -1,4 +1,6 @@
 .productListContainer {
     display : flex;
     flex-wrap : wrap;
+    justify-content: center;
+    font-family: "Dosis", "Lato", "Arial";
 }
