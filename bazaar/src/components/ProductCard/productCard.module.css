@@ -1,11 +1,12 @@
 .productCardContainer {
     margin : 0 2px;
-    padding: 10px;
+    padding: 6px;
     height: 340px;
-    border-bottom: 2px dashed #cec8c85c;
-    background-color : #fff;
+    border-bottom: 2px dashed #8382825c;
+    background-color : #8e99fb30;
     box-shadow : 2px 0 1px #cec8c85c;
-    flex: 0 0 23%;
+    flex: 0 0 18%;
+    font-family: "Dosis", "Lato", "Arial";
 }
 
 .productHeading {
@@ -15,11 +16,13 @@
 }
 
 .image {
-    max-width: 30%;
+    max-width: 38%;
+    display: block;
+    margin: auto;
 }
 
 .productDetails {
-    height : 68px; 
+    height : 85px; 
     background-color : #f3efefbf;
     overflow: hidden;   
     -webkit-line-clamp: 4;  
