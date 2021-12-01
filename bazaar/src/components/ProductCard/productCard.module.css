@@ -25,8 +25,7 @@
     height : 85px; 
     background-color : #f3efefbf;
     overflow: hidden;   
-    -webkit-line-clamp: 4;  
-    font-weight : 600;   
+    -webkit-line-clamp: 4;    
     font-size : 11px;
 }
 
