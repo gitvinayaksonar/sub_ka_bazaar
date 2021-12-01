@@ -15,17 +15,17 @@ interface ProductsListProps {
 
 type Props = ProductsListProps & LinkStateProps & LinkDispatchProps;
 
-function ProductsList(props : Props) {
+function ProductsList({products, fetchProductsList} : Props) {
 
     useEffect(() => {
-        props.fetchProductsList()        
-    }, [props])
+        fetchProductsList("")        
+    }, [fetchProductsList])
 
     const renderContent = () => {
         return (
             <div className = {styles.productListContainer}>
                 {
-                    props.products.map((eachProduct) => {
+                    products.map((eachProduct) => {
                         return <ProductCard product = { eachProduct } key = { eachProduct.id } />
                     })
                 }
@@ -47,7 +47,7 @@ interface LinkStateProps {
 }
   
 interface LinkDispatchProps {
-    fetchProductsList : () => void;
+    fetchProductsList : (catId : string) => void;
 }
 
 const mapStateToProps = (state : AppState, ownProps : ProductsListProps):LinkStateProps => ({
@@ -55,10 +55,7 @@ const mapStateToProps = (state : AppState, ownProps : ProductsListProps):LinkSta
 });
 
 const mapDispatchToProps = (dispatch : Dispatch<AppActions>, ownProps : ProductsListProps):LinkDispatchProps => ({
-    fetchProductsList: () => dispatch(fetchProductsList()),
+    fetchProductsList: (catId) => dispatch(fetchProductsList(catId)),
 });
   
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(ProductsList);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductsList);

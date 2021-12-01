@@ -1,0 +1,15 @@
+.productsPageContainer {
+    display: flex;
+}
+
+.productCategoryContainer {
+    float: left;
+    width: 15%;
+    height : auto;
+}
+
+.productsListContainer {
+    width: 80%;  
+    float: right;
+    background-color : #fff;
+}
