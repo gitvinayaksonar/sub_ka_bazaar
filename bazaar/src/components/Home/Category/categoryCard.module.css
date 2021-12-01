@@ -1,0 +1,49 @@
+.categoryContainer {
+    box-shadow: 0 6px 4px -4px #bdbaba;
+    display : flex;
+    margin : 15px 0;
+    font-family: "Dosis", "Lato", "Arial";
+}
+
+.firstSection img {
+    width : 67%;
+    margin : 0 auto;
+    height : auto;
+} 
+
+.firstSection {
+    width: 20%; 
+    float:left;
+    padding-top: 18px;
+    padding-left: 96px;
+}
+
+.secondSection {
+    margin : auto;
+    display : flex;
+    flex-flow : column;
+}
+
+.cartHeading {
+    text-align : center;    
+    font-weight : 700;
+}
+
+.cartPara  {
+text-align : center;
+font-weight : 400;
+}
+
+.exporeNow{
+    display : flex;
+    overflow : visible;  
+    justify-content : center;  
+    margin : 20px auto;
+    
+}
+
+.exporeNow a {
+    color : white;
+    background-color : #cf0768;
+    padding : 7px;
+}

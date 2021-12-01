@@ -1,0 +1,42 @@
+.stickedBar {
+  padding: 0 90px;
+  height: 73px;
+  box-shadow: 0 3px 2px #e6e3e3;
+  display : flex;
+  width : 90%;
+  margin : 0 auto;
+}
+.stickedBar img {
+  height: auto;
+}
+
+.container{
+margin : 40px 20px 0px 150px
+}
+.container a {
+  padding : 0 10px; 
+}
+
+.rightContainer {
+  margin-left: auto;
+  order: 2;
+  
+}
+
+.rightNav {
+  margin : 5px auto;
+  display : flex;
+}
+
+.rightNav a{
+  margin : 0;
+  padding : 0 5px;
+  font-weight : bold;
+  font-size : 12px;
+}
+
+.cart{
+  width : 100px;
+  align-items : center;    
+  margin : 2px auto;
+}
