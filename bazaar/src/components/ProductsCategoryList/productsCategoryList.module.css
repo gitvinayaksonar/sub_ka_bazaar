@@ -1,0 +1,11 @@
+.categoryTile {
+    height: 24px;
+    box-shadow: 0 1px 0 #ada8a863;
+    text-align: left;
+    padding: 6%;
+    color : #3c393978;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: "Dosis", "Lato", "Arial";
+    font-weight: bold;
+}
