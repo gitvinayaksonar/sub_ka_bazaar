@@ -1,4 +1,4 @@
-import { FetchProductsAction, FetchBanners, FetchCategories } from "../../types/actions";
+import { FetchProductsAction, FetchBanners, FetchCategories, FetchLoginDetails } from "../../types/actions";
 import { Product } from "../../types/product";
 import { Banner } from "../../types/banner";
 import { Category } from '../../types/categories'
@@ -344,6 +344,11 @@ const categoriesData: Category[] = [
 
 ]
 
+const rootUser: {username:string, password:string} ={
+  "username":"Root",
+   "password":"123"
+}
+
 // actions
 
 export const fetchProductsList = (): FetchProductsAction => {
@@ -365,5 +370,12 @@ export const fetchCategoryList = (): FetchCategories => {
   return {
     type: 'FETCH_CATEGORY_LIST',
     payload: categoriesData
+  }
+}
+
+export const fetchLoginDetails = (): FetchLoginDetails => {
+  return {
+    type: 'FETCH_LOGIN_DETAILS',
+    payload: rootUser
   }
 }
