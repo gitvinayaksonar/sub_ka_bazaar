@@ -1,0 +1,43 @@
+form{
+    width : 70%;
+}
+
+.submitButton{
+    background-color: #cf0768;
+    border: none;
+    color: #fff;
+    height: 35px;
+    width: 100%;
+    margin: 9px 15px;
+}
+
+.loginContainer {
+    padding: 50px 100px 0px 100px;
+    max-width: 100%;
+    margin-top : 55px;
+    display: flex;
+}
+
+.descriptionSection{
+    width: 90%;
+}
+
+input {
+    margin: 15px;    
+    width: 100%;
+    border : none;
+    height:30px;
+    border-bottom: 1px solid #e6e3e3;
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }
+label{
+    color:#cf0768;
+    padding-top: 20px;
+}
+input:focus{
+    outline: none;
+    border-bottom: 1px solid #cf0768;
+}
