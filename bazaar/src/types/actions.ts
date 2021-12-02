@@ -7,8 +7,6 @@ export const FETCH_PRODUCTS = 'FETCH_PRODUCTS';
 export const FETCH_BANNERS = 'FETCH_BANNERS';
 export const FETCH_LOGIN_DETAILS = 'FETCH_LOGIN_DETAILS';
 
-
-
 export interface FetchCategoryListAction {
     type : typeof FETCH_CATEGORIES,
     payload : Category[]
@@ -24,11 +22,6 @@ export interface FetchBanners {
     payload: Banner[];
 }
 
-export interface FetchCategories  {
-    type: typeof FETCH_CATEGORIES;
-    payload: Category[];
-}
-
 export interface FetchLoginDetails  {
     type: typeof FETCH_LOGIN_DETAILS;
     payload: {username:string, password:string};
@@ -36,6 +29,5 @@ export interface FetchLoginDetails  {
 
 export type AppActions = FetchCategoryListAction | FetchProductsAction;
 export type FetchBanner = FetchBanners;
-export type FetchCategory = FetchCategories;
 export type FetchLogin = FetchLoginDetails;
 

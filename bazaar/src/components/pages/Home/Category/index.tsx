@@ -1,4 +1,5 @@
-import { Category } from '../../../types/categories';
+import { useNavigate } from 'react-router-dom';
+import { Category } from '../../../../types/categories';
 import styles from './categoryCard.module.css';
 
 interface categoryCard {
@@ -6,8 +7,14 @@ interface categoryCard {
     index: number
 }
 function CategoryCard(props: categoryCard) {
+    const navigate = useNavigate();
     const categoryObj = props.category;
     const order = props.index % 2 === 0 ? 0 : 1;
+
+    const clickHandler = (catId : string) => {
+        navigate(`/products?${catId}`)
+    }
+    
     return (
         <div className={styles.categoryContainer} >
             <div className={styles.firstSection} style = {{ order : order}} >
@@ -16,10 +23,8 @@ function CategoryCard(props: categoryCard) {
             <div className={styles.secondSection} >
                 <h4 className={styles.cartHeading} >{categoryObj.name}</h4>
                 <p className={styles.cartPara}>{categoryObj.description}</p>
-                <div className={styles.exporeNow}>
-                    <a href={`/signIn`}>
-                        Explore {categoryObj.name}
-                    </a>
+                <div className={styles.exporeNow} onClick = {() => clickHandler(categoryObj.id)}>                   
+                        Explore {categoryObj.name}                    
                 </div>
             </div>
         </div>

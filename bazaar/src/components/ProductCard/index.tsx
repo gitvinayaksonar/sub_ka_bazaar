@@ -6,7 +6,6 @@ interface ProductCardProps {
 }
 function ProductCard(props : ProductCardProps) {    
     const productObj = props.product;    
-    // console.log("productObj >>", productObj);
     
     const clickHandler = (productName : string = 'product') => {
         alert(`In Cart : ${productName}`)

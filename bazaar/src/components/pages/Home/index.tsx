@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 import { connect } from "react-redux"
 import { Dispatch } from "redux";
-import { fetchBanners, fetchCategoryList } from "../../redux/actions";
-import { Banner } from "../../types/banner";
-import { AppState } from "../../redux/store/configureStore";
-import { FetchBanner, FetchCategory } from "../../types/actions";
+import { fetchBanners, fetchCategoryList } from "../../../redux/actions";
+import { Banner } from "../../../types/banner";
+import { AppState } from "../../../redux/store/configureStore";
 import { CarouselProvider, Slider, Slide, DotGroup } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import { Category } from "../../types/categories";
+import { Category } from "../../../types/categories";
 import CategoryCard from './Category';
 import './home.css';
 
@@ -80,12 +79,12 @@ interface LinkDispatchProps {
 
 const mapStateToProps = (state: AppState): LinkStateProps => ({
     banners: state.banners,
-    categoryList: state.categores
+    categoryList: state.categories
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): LinkDispatchProps => ({
-    fetchBanners: () => dispatch<FetchBanner>((fetchBanners())),
-    fetchCategories: () => dispatch<FetchCategory>((fetchCategoryList())),
+    fetchBanners: () => dispatch(fetchBanners()),
+    fetchCategories: () => dispatch(fetchCategoryList()),
 });
 
 export default connect(

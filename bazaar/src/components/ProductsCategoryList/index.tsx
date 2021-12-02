@@ -13,8 +13,8 @@ interface ProductsCategoryListProps {
 
 type Props = ProductsCategoryListProps & LinkStateProps & LinkDispatchProps;
 
-function ProductsCategoryList({categories, fetchCategoryList, fetchProductsList} : Props) {
-
+function ProductsCategoryList({categories, fetchCategoryList, fetchProductsList} : Props) {  
+    
     useEffect(() => {               
         fetchCategoryList()
     }, [fetchCategoryList])
