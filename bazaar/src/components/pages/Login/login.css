@@ -9,6 +9,7 @@ form{
     height: 35px;
     width: 100%;
     margin: 9px 15px;
+    font-family: "Dosis", "Lato", "Arial";
 }
 
 .loginContainer {
@@ -16,6 +17,8 @@ form{
     max-width: 100%;
     margin-top : 55px;
     display: flex;
+    font-family: "Dosis", "Lato", "Arial";
+    font-weight: bold;
 }
 
 .descriptionSection{

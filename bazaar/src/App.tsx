@@ -3,22 +3,21 @@ import {
   Route,
   Link, Routes
 } from "react-router-dom";
-import Home from './components/Home';
-import { Products } from './components/Products';
+import Home from './components/pages/Home';
+import { Products } from './components/pages/Products';
 import './App.css';
-import logo from './logo.png';
-import './cart.svg'
-import Login from "./components/Login/Login";
+import Login from "./components/pages/Login/Login";
 
 function App() {
   return (
     <Router>
       <div className="stickedBar">
-        <img className="logo" src={logo} height={70} width={150} alt="logo" />
+        <img className="logo" src={`/logo.png`} height={70} width={150} alt="logo" />        
         <div className="container">
           <Link to="/">Home</Link>
           <Link to="/products">Products</Link>
         </div>
+
         <div className="rightContainer">
           <div className="rightNav">
             <Link to="/signIn">Sign In</Link>
@@ -29,6 +28,7 @@ function App() {
             </div>
         </div>
       </div>
+      
       <Routes >
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />

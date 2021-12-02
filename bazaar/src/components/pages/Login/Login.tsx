@@ -1,10 +1,10 @@
-import { AppState } from "../../redux/store/configureStore";
+import { AppState } from "../../../redux/store/configureStore";
 import { Dispatch } from "redux";
 import { connect } from "react-redux";
 import './login.css';
-import { fetchLoginDetails } from "../../redux/actions";
+import { fetchLoginDetails } from "../../../redux/actions";
 import { useState, useEffect } from 'react';
-import { FetchLogin } from "../../types/actions";
+import { FetchLogin } from "../../../types/actions";
 import { useNavigate } from 'react-router-dom';
 
 type Props = LinkStateProps & LinkDispatchProps;
@@ -17,6 +17,7 @@ function Login(props: Props) {
     });
     const [loggedIn, setIsLoggedIn] = useState(false);
     const { username, password } = inputs;
+
     useEffect(() => {
         props.fetchLoginDetails()
     }, [props])
@@ -53,7 +54,6 @@ function Login(props: Props) {
         </div>
     )
 }
-
 
 interface LinkStateProps {
     rootUser: { username: string, password: string }

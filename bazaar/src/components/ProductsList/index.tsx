@@ -7,7 +7,7 @@ import { AppActions } from "../../types/actions";
 import { Product } from "../../types/product";
 import ProductCard from "../ProductCard";
 import styles from './productList.module.css'
-
+import { useLocation} from 'react-router-dom';
 
 interface ProductsListProps {
     color?: string
@@ -15,11 +15,13 @@ interface ProductsListProps {
 
 type Props = ProductsListProps & LinkStateProps & LinkDispatchProps;
 
-function ProductsList({products, fetchProductsList} : Props) {
-
+function ProductsList({products, fetchProductsList} : Props) {    
+    const location = useLocation();
+    const catId = location.search.split('?')[1]; 
+    
     useEffect(() => {
-        fetchProductsList("")        
-    }, [fetchProductsList])
+        fetchProductsList(catId)        
+    }, [catId, fetchProductsList])
 
     const renderContent = () => {
         return (
@@ -59,3 +61,4 @@ const mapDispatchToProps = (dispatch : Dispatch<AppActions>, ownProps : Products
 });
   
 export default connect(mapStateToProps, mapDispatchToProps)(ProductsList);
+
